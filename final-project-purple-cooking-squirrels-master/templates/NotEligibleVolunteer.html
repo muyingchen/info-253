@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Not Eligible</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='bootstrap-4.0.0-beta.2-dist/css/bootstrap.min.css')}}">
+	</head>
+
+	<body>
+		<nav class="navbar sticky-top navbar-light" style="background-color:#262922">
+			<a class="navbar-brand" href="/index">
+    			<img src="{{ url_for('static', filename='real_new_logo.png')}}" width="70" height="70" alt="">
+  			</a>
+  			<div class="justify-content-start ">
+				<div class="row">
+					<a style="color:white; font-size:20px" class="nav-link" href='/about'>About Us</a>
+					<a style="color:white; font-size:20px" class="nav-link" href='/contact'>Contact Us</a>
+				</div>
+			</div>
+		</nav>
+		<div class = "container" style="width:70%; text-align:center">
+			<h1 style="padding-top:50px;padding-bottom:50px">Not Eligible</h1>
+
+			<p> {{ Reason }}</p>
+
+			<p>If you have any questions, please feel free to <a href='/contact'>contact us</a>.</p>
+		</div>
+	</body>
+</html>

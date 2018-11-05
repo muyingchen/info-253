@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Eligible</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='bootstrap-4.0.0-beta.2-dist/css/bootstrap.min.css')}}">
+	</head>
+	<body>
+		<nav class="navbar sticky-top navbar-light" style="background-color:#262922">
+			<a class="navbar-brand" href="/index">
+    			<img src="{{ url_for('static', filename='real_new_logo.png')}}" width="70" height="70" alt="">
+  			</a>
+  			<div class="justify-content-start ">
+				<div class="row">
+					<a style="color:white; font-size:20px" class="nav-link" href='/about'>About Us</a>
+					<a style="color:white; font-size:20px" class="nav-link" href='/contact'>Contact Us</a>
+				</div>
+			</div>
+		</nav>
+		<div class = "container" >
+			<h1 style="text-align:center">Volunteer Shift</h1>
+        </div>
+        <br/>
+            <table class="table table-inverse text-center" style="width:80%; margin:auto">
+                <thead class="thead-inverse">
+        			<tr>
+                		<th>Date</th>
+                		<th>Healthcare Specialty</th>
+                		<th>Number of Volunteers Needed</th>
+                		<th>Sign Up Here</th>
+          			</tr>
+                </thead>
+                <tbody>
+        			{% for volunteer in data %}
+        			<!-- <form action="/shift" method="POST" style="padding-top:40px"> -->
+                    <form action="/shift" method="POST">
+                        <tr>
+                			<th>{{volunteer.shift_date}}</th>
+                			<th>{{volunteer.shift_type}}</th>
+                			<th>{{volunteer.quantity}}</th>
+                			<th><button type="submit" class="btn btn-primary" value="submit">Sign Up</button></th>
+
+        			<input type="hidden" name="npi" value="{{npi}}">
+        			<input type="hidden" name="shift_id" value="{{volunteer.shift_id}}">
+        			<input type="hidden" name="full_name" value="{{full_name}}">
+        			<input type="hidden" name="quantity" value="{{volunteer.quantity}}">
+
+                 </tr>
+        			{% endfor %}
+                    </form>
+
+                </tbody>
+            </table>
+	</body>
+</html>

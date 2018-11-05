@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Home</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='bootstrap-4.0.0-beta.2-dist/css/bootstrap.min.css')}}">
+	</head>
+	<body style = "background-color:#262922">
+		<nav class="navbar sticky-top navbar-light" style="background-color:#262922">
+			<a class="navbar-brand" href="/index">
+    			<img src="{{ url_for('static', filename='real_new_logo.png')}}" width="70" height="70" alt="">
+  			</a>
+  			<div class="justify-content-start ">
+				<div class="row">
+					<a style="color:white; font-size:20px" class="nav-link" href='/about'>About Us</a>
+					<a style="color:white; font-size:20px" class="nav-link" href='/contact'>Contact Us</a>
+				</div>
+			</div>
+		</nav>
+
+		<div style="text-align:center;background-image:url('static/original.png')">
+		<h1 style="font-size:100px;color:white;padding-top:200px;padding-bottom:200px">GOOD NEIGHBOR</h1>
+		</div>
+		<div class="container" style="text-align:center;padding-top:50px">
+			<a style="padding-right:10px;font-size:40px;color:white;text-decoration:none" href='/volunteer'>VOLUNTEER</a>
+			<a style="padding-left:10px;font-size:40px;color:white;text-decoration:none" href='/organization'>ORGANIZATION</a>
+		</div>
+		</div>
+		
+	</body>
+</html>
+	

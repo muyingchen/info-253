@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Volunteer Schedule</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='bootstrap-4.0.0-beta.2-dist/css/bootstrap.min.css')}}">
+	</head>
+	<body>
+
+		<nav class="navbar sticky-top navbar-light" style="background-color:#262922">
+			<a class="navbar-brand" href="/index">
+    			<img src="{{ url_for('static', filename='real_new_logo.png')}}" width="70" height="70" alt="">
+  			</a>
+  			<div class="justify-content-start ">
+				<div class="row">
+					<a style="color:white; font-size:20px" class="nav-link" href='/about'>About Us</a>
+					<a style="color:white; font-size:20px" class="nav-link" href='/contact'>Contact Us</a>
+				</div>
+			</div>
+		</nav>
+
+		<div class = "container" style="width:40%">
+			<h1>Volunteer Schedule</h1>
+			<form id="volunteerScheduleForm" action="/schedulebyspecialty" method="GET">
+				<div class="dropdown">
+				Skill:<br>
+				<select name="shift_type">
+					<option value="nurse">General nursing</option>
+					<option value="neurology">Neurology</option>
+					<option value="pediatry">Pediatry</option>
+					<option value="family-practitioner">General MD</option>
+					<option value="emergency care">Emergency Care</option>
+					<option value="trauma care">Trauma Care</option>
+				</select><br>
+				</div>
+				 <div style="padding-top:10px">
+		  		<button type="submit" class="btn btn-primary" value="submit">Submit</button>
+		  		</div>
+			</form>
+			<!-- <p>Filter by ID:</p> -->
+
+			<form id="volunteerScheduleForm" action="/schedulebyquantity" method="GET">
+
+		  <div style="padding-top:10px">
+		  <button type="submit" class="btn btn-primary" value="submit">View unfilled shifts</button>
+		  </div>
+			</form>
+          <br />
+      </div>
+			<table class="table table-inverse text-center" style="width:80%; margin:auto">
+                <thead class="thead-inverse">
+        			<tr>
+                		<th>Date</th>
+                		<th>Healthcare Specialty</th>
+                		<th>Number of Volunteers Needed</th>
+                		<th>Volunteers Signed Up</th>
+          			</tr>
+                </thead>
+                <tbody>
+        			{% for volunteer in data %}
+        			<tr>
+            			<th>{{volunteer.shift_date}}</th>
+            			<th>{{volunteer.shift_type}}</th>
+            			<th>{{volunteer.quantity}}</th>
+            			<th>{{volunteer.volunteers}}</th>
+        			</tr>
+    			    {% endfor %}
+                 </tbody>
+			</table>
+
+
+	<script src="/static/js/script.js"></script>
+
+	</body>
+</html>

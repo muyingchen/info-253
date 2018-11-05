@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Organization Confirmation</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="{{ url_for('bootstrap-4.0.0-beta.2-dist', filename='css/bootstrap.min.css')}}">
+	</head>
+	<body>
+		<nav class="navbar sticky-top navbar-light" style="background-color:#262922">
+			<a class="navbar-brand" href="/index">
+    			<img src="{{ url_for('static', filename='real_new_logo.png')}}" width="70" height="70" alt="">
+  			</a>
+  			<div class="justify-content-start ">
+				<div class="row">
+					<a style="color:white; font-size:20px" class="nav-link" href='/about'>About Us</a>
+					<a style="color:white; font-size:20px" class="nav-link" href='/contact'>Contact Us</a>
+				</div>
+			</div>
+		</nav>
+		<div class = "container" style="width:70%; text-align:center">
+			<h1 style="padding-top:50px; padding-bottom:50px">Organization Confirmation</h1>
+
+			<p>Thank you! We are actively looking for volunteers with the right skill to join your cause and will notify you of next steps. In the meanwhile, please login to your portal to review progress and track potential volunteers. Check <a href='/Schedule'>here</a> to view your schedule. Or, click <a href="/organization">here</a> to schedule another shift.</p>
+
+
+			<p>If you have any questions, please feel free to <a href='/contact'>contact us</a> or your organization coordinator directly.</p>
+			
+		</div>
+
+	</body>
+</html>
+	
