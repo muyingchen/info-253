@@ -91,7 +91,7 @@ pyflakes==1.6.0
 PyJWT==1.5.2
 pyOpenSSL==17.1.0
 pyparsing==2.2.0
-PyPDF2==1.26.0
+PyPDF2==1.27.5
 pysolr==3.6.0
 python-dateutil==2.6.0
 pytz==2017.2
