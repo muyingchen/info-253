@@ -72,7 +72,7 @@ msrestazure==0.4.11
 numpy==1.12.1
 oauthlib==2.0.2
 olefile==0.44
-openpyxl==2.1.4
+openpyxl==2.4.2
 pandas==0.19.2
 pathlib==1.0.1
 pathlib2==2.3.0
